@@ -16,12 +16,14 @@ define root view entity ZC_ASSB_0020 as projection on ZR_ASSB_0020
             lineItem: [{position: 10 }],
             identification: [{position: 10 }]
         }
+        @Consumption.valueHelpDefinition: [{ entity: { name:'ZI_PLANT_01', element: 'Plant' } }]
     key Werks,
         @EndUserText.label: '평가클래스'
         @UI: {
             lineItem: [{position: 20 }],
             identification: [{position: 20 }]
         }
+        @Consumption.valueHelpDefinition: [{ entity: { name:'ZI_VCLASS_01', element: 'ValuationClass' } }]
     key Bklas,
         @EndUserText.label: '수불예외번호'
         @UI: {
@@ -58,6 +60,7 @@ define root view entity ZC_ASSB_0020 as projection on ZR_ASSB_0020
             lineItem: [{position: 80 }],
             identification: [{position: 80 }]
         }
+        @Consumption.valueHelpDefinition: [{ entity : {name: 'ZR_ASSB_0011S', element: 'Zsfld' }}]
         Zsfld,
         @EndUserText.label: '예외설정설명'
         @UI: {
